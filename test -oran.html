@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="priorityTable.js"></script>
+	</head>
+
+	<body>
+
+		<script>
+		
+
+
+			let ptable = new Ptable(10);
+			
+
+
+			
+
+				
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(300,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+
+
+			
+	
+			
+			
+			for(var i =0 ; i < ptable.PTableArray.length; i++)
+			{
+				document.write(ptable.PTableArray[i].scale + " - ")
+				document.write(ptable.PTableArray[i].priority + " - ")
+				document.write(ptable.PTableArray[i].qArray.length+" - ")
+				document.write(ptable.PTableArray[i].qArray)
+				document.write("<br>");
+				
+			}
+			
+			
+
+			 alert(ptable.size());
+			
+			
+
+			 
+			for(var j =0 ; j < 9; j++)
+			{
+				document.write(j + " - ");
+				document.write(ptable.get());
+				
+				document.write(" -> ");
+				
+				
+			for(var i =0 ; i < ptable.PTableArray.length; i++)
+			{
+				
+				document.write(ptable.PTableArray[i].scaleCounter)
+				document.write(" - ");
+				
+			}
+			
+				document.write(" -> ");
+				document.write(ptable.totalPriority);
+				document.write(" -> ");
+			
+			
+				
+			for(var i =0 ; i < ptable.PTableArray.length; i++)
+			{
+				
+				document.write(ptable.PTableArray[i].priority)
+				document.write(" - ");
+				
+			}
+				document.write("<br>");
+			}
+			
+			
+		
+				
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+				ptable.add(200,"ali"+3);
+
+	
+			
+			
+			for(var i =0 ; i < ptable.PTableArray.length; i++)
+			{
+				document.write(ptable.PTableArray[i].scale + " - ")
+				document.write(ptable.PTableArray[i].priority + " - ")
+				document.write(ptable.PTableArray[i].qArray.length+" - ")
+				document.write(ptable.PTableArray[i].qArray)
+				document.write("<br>");
+				
+			}
+			
+			
+			for(var j =0 ; j < 5; j++)
+			{
+				document.write(j + " - ");
+				document.write(ptable.get());
+				
+				document.write(" -> ");
+				
+				
+			for(var i =0 ; i < ptable.PTableArray.length; i++)
+			{
+				
+				document.write(ptable.PTableArray[i].scaleCounter)
+				document.write(" - ");
+				
+			}
+			
+				document.write(" -> ");
+				document.write(ptable.totalPriority);
+				document.write(" -> ");
+			
+			
+				
+			for(var i =0 ; i < ptable.PTableArray.length; i++)
+			{
+				
+				document.write(ptable.PTableArray[i].priority)
+				document.write(" - ");
+				
+			}
+				document.write("<br>");
+			}
+		
+
+			alert(ptable.size());
+
+
+		</script>
+
+	</body>
+</html>

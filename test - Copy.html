@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="priorityTable.js"></script>
+	</head>
+
+	<body>
+
+		<button id="ali">ALI (340)</button>
+		<button id="vali">VELI (270)</button>
+		<button id="deli">DELI(130)</button>
+		<button id="gmail">GMAIL(100)</button>
+		<p id="ptable" "></p>
+
+		<script>
+		
+			let ptable = new Ptable(100,550);
+		
+
+			
+			$( "#ali" ).click(function() {
+				
+			for(var i =0 ; i < 40; i++)
+			{
+				ptable.add(340,"ali");
+			}
+				
+			});
+			
+			$( "#vali" ).click(function() {
+			for(var i =0 ; i < 40; i++)
+			{				
+				ptable.add(270,"veli");
+			}	
+				
+			});
+			
+			
+			$( "#deli" ).click(function() {
+			for(var i =0 ; i < 40; i++)
+			{				
+				ptable.add(130,"deli");
+				
+}
+			});
+			
+			$( "#gmail" ).click(function() {
+			for(var i =0 ; i < 40; i++)
+			{				
+				ptable.add(100,"gmail");
+			}	
+
+			});
+			
+
+			
+
+			console.log("Hi!");
+			
+			setInterval(function timeout() {
+				if (ptable.size() > 0)
+				{
+
+					var value = ptable.get()
+					console.log(value + " get" );
+				var s1 = "";	
+				for(var i =0 ; i < ptable.Queues.length; i++)
+				{
+					s1 = s1 + ptable.Queues[i].scale + " - " + ptable.Queues[i].scaleCounter  + " - " + ptable.Queues[i].priority + " - " +ptable.Queues[i].qArray.length+" - " +ptable.Queues[i].qArray + "<br>";
+				
+				}
+				document.getElementById("ptable").innerHTML = s1;
+
+				}
+				else
+				{
+					console.log("array emthy");
+				}
+			}, 250);
+
+			console.log("Welcome to PriorityTable.");
+
+		</script>
+
+	</body>
+</html>
